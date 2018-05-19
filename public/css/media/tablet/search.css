@@ -1,0 +1,10 @@
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+	.search__form {
+		flex-direction: column;
+	}
+
+	.search__form .search__form_item {
+		width: 60%;
+		margin-bottom: 15px;
+	}
+}
