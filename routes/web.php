@@ -23,3 +23,5 @@ Route::post('logout', 'AdminController@logout')->name('logout');
 Route::middleware('AdminPanel')->prefix('admin')->name('admin.')->group(function() {
     Route::get('/', 'AdminController@index')->name('index');
 });
+
+Route::get('hotel/{id}', 'HotelController@index')->name('hotel.view');

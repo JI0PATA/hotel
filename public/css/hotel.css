@@ -1,0 +1,115 @@
+/************* СТРАНИЦА ОТЕЛЯ *************/
+
+.header__center {
+	font-size: initial;
+}
+
+.header__title {
+	font-size: 45px;
+}
+
+.header__stars img {
+	width: 30px;
+}
+
+.header__hotel_info {
+	font-size: 22px;
+	margin-top: 10px;
+}
+
+section {
+	padding: 20px;
+}
+
+/************* ОПИСАНИЕ ОТЕЛЯ *************/
+.hotel__description-text {
+	text-align: justify;
+}
+/************* /ОПИСАНИЕ ОТЕЛЯ ************/
+
+/************* ФОТО ГАЛЕРЕЯ *************/
+.photo_gallery {
+	width: 100%;
+	min-height: 400px;
+	background: var(--third-color);
+}
+
+.slider-for {
+	margin-bottom: 30px;
+}
+
+.slider-for .slider__item img {
+	width: 100%;
+}
+
+.slider-nav .slider__item img {
+	width: 150px;
+}
+/************* /ФОТО ГАЛЕРЕЯ ************/
+
+/************* КНПОКИ *************/
+.button {
+	display: inline-block;
+	min-width: 200px;
+	font-size: 20px;
+	color: var(--main-color);
+	padding: 3px 30px;
+	border: 2px solid var(--main-color);
+	border-radius: 15px;
+	cursor: pointer;
+	transition: .4s;
+	text-align: center;
+	position: relative;
+}
+
+.button:hover {
+	background: var(--main-color);
+	color: #fff;
+}
+
+.item_parent {
+	width: 26%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+/************* /КНПОКИ ************/
+
+/************* БЛОКИ С ЦЕНАМИ *************/
+.button__price .price__price {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+
+.price__items {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.price__title, .price__price {
+	transition: opacity .4s;
+}
+
+.button__price:hover .price__title {
+	opacity: 0;
+}
+
+.button__price:hover .price__price {
+	opacity: 1;
+}
+/************* /БЛОКИ С ЦЕНАМИ ************/
+
+/************* УСЛУГИ ОТЕЛЯ *************/
+.hotel__services_items {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+/************* /УСЛУГИ ОТЕЛЯ ************/

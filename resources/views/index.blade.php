@@ -25,7 +25,7 @@ $header__center = "Сервис по подбору отелей<br>«HotelSearc
                     <img src="{{ asset('img/star.png') }}" alt="">
                 </div>
             </div>
-            <a href="" class="hotels__read">Посмотреть</a>
+            <a href="{{ route('hotel.view', ['id' => 1]) }}" class="hotels__read">Посмотреть</a>
         </div>
         <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel2.jpg') }}')">
             <div class="hotels__info">
