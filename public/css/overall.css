@@ -1,0 +1,36 @@
+#popupMsg {
+	width: 300px;
+	padding: 20px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	font-size: 25px;
+	position: fixed;
+	right: -300px;
+	top: 100px;
+	z-index: 20;
+	animation: showPopupMsg .5s forwards, hiddenPopupMsg .5s 3s forwards;
+}
+
+@keyframes showPopupMsg {
+	0% {
+		right: -300px;
+	}
+	50% {
+		right: 50px;
+	}
+	100% {
+		right: 0;
+	}
+}
+
+@keyframes hiddenPopupMsg {
+	0% {
+		right: 0;
+	}
+	50% {
+		right: 50px;
+	}
+	100% {
+		right: -300px;
+	}
+}

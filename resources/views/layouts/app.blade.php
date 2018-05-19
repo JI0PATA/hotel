@@ -8,10 +8,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name') }}</title>
 
+    <link rel="stylesheet" href="{{ asset('css/overall.css') }}">
+
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media/tablet/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media/mobile/style.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/page.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media/mobile/header.css') }}">
@@ -28,6 +32,11 @@
     @stack('styles')
 </head>
 <body>
+
+@if(session()->has('popupMsg'))
+    {!! session()->get('popupMsg') !!}
+@endif
+
 <input type="checkbox" class="hidden" id="menu__checkbox">
 
 <header id="header">
