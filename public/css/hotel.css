@@ -95,11 +95,11 @@ section {
 	transition: opacity .4s;
 }
 
-.button__price:hover .price__title {
+.button__price:hover .price__title, .button__price:focus .price__title {
 	opacity: 0;
 }
 
-.button__price:hover .price__price {
+.button__price:hover .price__price, .button__price:focus .price__price {
 	opacity: 1;
 }
 /************* /БЛОКИ С ЦЕНАМИ ************/

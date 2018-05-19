@@ -4,6 +4,8 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/hotel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/media/tablet/hotel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/media/mobile/hotel.css') }}">
 
     <link rel="stylesheet" href="{{ asset('components/slick/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('components/slick/slick-theme.css') }}">
@@ -18,7 +20,7 @@
 @push('scripts')
     <script src="{{ asset('components/slick/slick.js') }}"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.slider-for').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -34,6 +36,22 @@
                 centerMode: true,
                 focusOnSelect: true,
                 infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 3,
+                        }
+                    },
+                ]
             });
         });
     </script>
