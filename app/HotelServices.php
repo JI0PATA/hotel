@@ -4,12 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Photo extends Model
+class HotelServices extends Model
 {
     public $timestamps = false;
-
-    protected $fillable = [
-        'hotel_id',
-        'img'
-    ];
 }

@@ -17,12 +17,12 @@ class CreateHotelRoomsTable extends Migration
             $table->increments('id');
 
             $table->integer('hotel_id')->unsigned();
-            $table->foreign('hotel_id')->references('id')->on('hotels');
+            $table->foreign('hotel_id')->references('id')->on('hotels')->onDelete('cascade');
 
             $table->integer('room_id')->unsigned();
             $table->foreign('room_id')->references('id')->on('rooms');
 
-            $table->float('price');
+            $table->string('price');
         });
     }
 

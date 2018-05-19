@@ -10,16 +10,15 @@
 
     <title>{{ config('app.name') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/overall.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/overall.css') }}">
+
+    @stack('styles')
 </head>
 <body>
 @if(session()->has('popupMsg'))
@@ -46,6 +45,8 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @if(session()->has('admin'))
+                            <li><a class="nav-link" href="{{ route('admin.services.index') }}">Услуги</a></li>
+                            <li><a class="nav-link" href="{{ route('admin.hotels.index') }}">Отели</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     Администратор <span class="caret"></span>
@@ -73,5 +74,15 @@
             @yield('content')
         </main>
     </div>
+
+{{--<script src="{{ asset('js/app.js') }}"></script>--}}
+<script src="{{ asset('js/jquery.js') }}"></script>
+
+<script src="{{ asset('js/jquery-ui/jquery-ui.min.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('js/jquery-ui/jquery-ui.min.css') }}">
+<link rel="stylesheet" href="{{ asset('js/jquery-ui/jquery-ui.structure.min.css') }}">
+<link rel="stylesheet" href="{{ asset('js/jquery-ui/jquery-ui.theme.min.css') }}">
+
+@stack('scripts')
 </body>
 </html>

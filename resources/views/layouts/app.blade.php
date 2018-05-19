@@ -72,6 +72,11 @@
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 
+<script src="{{ asset('js/jquery-ui/jquery-ui.min.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('js/jquery-ui/jquery-ui.min.css') }}">
+<link rel="stylesheet" href="{{ asset('js/jquery-ui/jquery-ui.structure.min.css') }}">
+<link rel="stylesheet" href="{{ asset('js/jquery-ui/jquery-ui.theme.min.css') }}">
+
 @stack('scripts')
 </body>
 </html>
