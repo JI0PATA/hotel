@@ -1,0 +1,30 @@
+/************* ПОИСК *************/
+#search {
+	width: 100%;
+	padding: 30px;
+	background: rgba(var(--main-color-rgb), .9);
+	position: relative;
+	overflow: hidden;
+}
+
+.search__form {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.search__form .search__form_item {
+	width: 27%;
+}
+
+.search__title {
+	display: inline-block;
+	font-size: 120px;
+	font-style: italic;
+	transform: rotate(-8deg);
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	left: 10%;
+	line-height: 1;
+}

@@ -1,0 +1,31 @@
+input.form__field , select.form__field, button.form__field {
+	padding: 10px;
+	font-size: 20px;
+	color: var(--main-color);
+	border-radius: 10px;
+	background: #fff;
+	width: 100%;
+	border: 2px solid #fff;
+	height: 100%;
+}
+
+button.form__field {
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+	transition: .4s;
+}
+
+button.form__field:hover {
+	background: #fff;
+	color: var(--main-color);
+}
+
+select.form__field option {
+	text-align: center;
+}
+
+::-webkit-input-placeholder {
+	color: var(--main-color);
+	text-align: center;
+}

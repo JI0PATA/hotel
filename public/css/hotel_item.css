@@ -1,0 +1,68 @@
+/************* КАРТОЧКИ ОТЕЛЕЙ *************/
+.hotels__items {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.hotels__item {
+	width: 20%;
+	height: 450px;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: .4s;
+	cursor: pointer;
+}
+
+.hotels__item:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .6);
+	position: absolute;
+	transition: .4s;
+}
+
+.hotels__item:hover:before {
+	background-color: rgba(0, 0, 0, .8);
+}
+
+.hotels__info {
+	position: relative;
+	z-index: 5;
+	text-align: center;
+}
+
+.hotels__name {
+	color: #fff;
+	font-size: 30px;
+}
+
+.hotels__stars img {
+	 width: 30px;
+}
+
+/************* КНОПКА "ПОСМОТРЕТЬ" *************/
+.hotels__read {
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 2px solid var(--main-color);
+	padding: 10px 20px;
+	transition: .4s;
+}
+
+.hotels__read:hover {
+	background: var(--main-color);
+	color: #fff;
+}
+/************* /КНОПКА "ПОСМОТРЕТЬ" ************/
