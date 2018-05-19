@@ -1,0 +1,5 @@
+@media screen and (max-width: 768px) {
+	.hotels__item {
+		width: 100%;
+	}
+}

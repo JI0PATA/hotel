@@ -11,14 +11,18 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media/tablet/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/media/mobile/style.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/media/mobile/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
     <link rel="stylesheet" href="{{ asset('css/search.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media/tablet/search.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/media/mobile/search.css') }}">
     <link rel="stylesheet" href="{{ asset('css/form.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hotel_item.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media/tablet/hotel_item.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/media/mobile/hotel_item.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
     @stack('styles')

@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+	#logo {
+		left: 20px;
+	}
+
+	.header__center {
+		font-size: 30px;
+	}
+}
