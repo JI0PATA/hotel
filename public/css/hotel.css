@@ -24,6 +24,7 @@ section {
 /************* ОПИСАНИЕ ОТЕЛЯ *************/
 .hotel__description-text {
 	text-align: justify;
+	font-size: 19px;
 }
 /************* /ОПИСАНИЕ ОТЕЛЯ ************/
 

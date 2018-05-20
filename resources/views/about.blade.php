@@ -18,22 +18,14 @@ $header__center = "О нас";
     <section class="page__content container">
         <h2 class="text-center">О нас</h2>
         <div class="page__description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae consequuntur, delectus facere nobis
-            non? A ab asperiores, blanditiis culpa dolore et facilis ipsa ipsum iusto laboriosam magni molestiae,
-            mollitia nostrum odit optio placeat quisquam repellat repellendus repudiandae saepe sapiente sed unde vero
-            voluptas voluptatem! Aspernatur dignissimos incidunt, libero maxime minus necessitatibus quos reiciendis
-            sunt? Eaque, error in iusto natus neque praesentium similique tempora totam veniam voluptas. At, neque,
-            quisquam. Aliquam, asperiores beatae doloribus eligendi et magnam, minus nihil odio pariatur perspiciatis
-            quae quaerat quia quidem quo sed unde ut voluptas. Animi aspernatur consectetur, id maiores quasi quos
-            repudiandae vel.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet animi blanditiis delectus ducimus
-            eaque eligendi expedita ipsa ipsam ipsum magnam maiores nisi pariatur, praesentium repellat, soluta tenetur
-            ullam. Alias aspernatur atque consequuntur debitis doloremque eaque ex facilis fuga in inventore laboriosam
-            laborum minus molestias mollitia natus necessitatibus nihil non odio odit perferendis placeat, quibusdam
-            quis quod ratione recusandae reprehenderit saepe sed soluta ullam voluptatibus. Ab adipisci deleniti et
-            eveniet excepturi iste itaque labore necessitatibus nisi, provident repellat repellendus, rerum soluta
-            tenetur unde, ut vitae voluptatibus. Dignissimos et exercitationem ipsum laborum laudantium, maiores
-            mollitia necessitatibus, nesciunt nobis rem, reprehenderit voluptatum?
+            Поиск жилья — важный этап в планировании путешествия. Мы создали Гольфстрим для удобства и экономии времени.
+            Менее чем за минуту, Гольфстрим проверит цены в соответствии с заданными вами параметрами по 70 агентствам и
+            официальным сайтам бронирования. Вы найдете подробные описания гостиниц, рейтинг, фотографии номеров, отзывы
+            гостей и другую информацию.Часто у нас появляются скидки и специальные предложения. Чтобы узнать какие отели
+            продаются по сниженным ценам, заполните строку поиска, дождитесь результатов и выберите фильтр "скидки" на
+            выдаче. Порой вы можете сэкономить 60 процентов от первоначальной суммы!Выбрать бюджетный номер не сложно.
+            Используйте фильтр по цене и на первой странице окажутся только дешевые варианты хостелов, гестхаусов и
+            апартаментов.
         </div>
     </section>
 @endsection

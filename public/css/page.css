@@ -1,3 +1,7 @@
 section.page__content {
 	padding: 20px;
 }
+
+.page__description {
+	font-size: 18px;
+}
