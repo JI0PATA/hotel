@@ -1,4 +1,4 @@
-input.form__field , select.form__field, button.form__field {
+input.form__field , select.form__field, button.form__field, .form__field {
 	padding: 10px;
 	font-size: 20px;
 	color: var(--main-color);

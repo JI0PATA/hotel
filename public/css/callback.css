@@ -1,0 +1,15 @@
+.callback__field {
+	border: 2px solid var(--main-color) !important;
+}
+
+button.callback__button {
+	margin: 0 auto;
+	color: #fff !important;
+	background: var(--main-color) !important;
+	transition: .4s;
+}
+
+button.callback__button:hover {
+	color: var(--main-color) !important;
+	background: #fff !important;
+}

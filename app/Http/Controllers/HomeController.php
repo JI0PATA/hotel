@@ -37,4 +37,24 @@ class HomeController extends Controller
     {
         return view('contacts');
     }
+
+    public function callback(Request $request)
+    {
+        $hotel = $request->hotel;
+        $name = $request->name;
+        $call = $request->call;
+        $room = $request->room;
+        $comment = $request->comment;
+
+        $res = mail(config('EMAIL'), 'Бронирование номера', "Отель: {$hotel}\n
+        Имя: {$name}\n
+        Телефон: {$call}\n
+        Тип номера: {$room}\n
+        Комментарий: {$comment}");
+
+        if ($res) createMsg(1, 'Ваше сообщение отправлено!');
+        else createMsg(0, 'Сообщение не отправлено! Попробуйте позже!');
+
+        return back();
+    }
 }

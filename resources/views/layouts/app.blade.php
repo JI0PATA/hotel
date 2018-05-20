@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('css/media/mobile/style.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/page.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/callback.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media/mobile/header.css') }}">
