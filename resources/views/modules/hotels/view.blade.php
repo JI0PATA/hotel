@@ -137,22 +137,22 @@ $header__center = '
         <form action="{{ route('callback') }}" class="callback__form">
             <input type="hidden" value="{{ $hotel->name }}" name="hotel">
             <div class="row">
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-4 col-sm-12 callback__parent">
                     <input type="text" class="form__field callback__field" placeholder="Ваше имя" required name="name">
                 </div>
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-4 col-sm-12 callback__parent">
                     <input type="text" class="form__field callback__field" placeholder="Ваш телефон" required name="call">
                 </div>
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-4 col-sm-12 callback__parent">
                     <select name="room" class="form__field callback__field">
                         @foreach($hotel->rooms as $room)
                             <option value="{{ $room->name }}">{{ $room->name }}</option>
                         @endforeach
                     </select>
                 </div>
-            </div><br>
+            </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 callback__parent">
                     <textarea name="comment" rows="3" class="form__field callback__field" placeholder="Комментарий"></textarea>
                 </div>
             </div><br>

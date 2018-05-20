@@ -1,5 +1,10 @@
+.callback__parent {
+	margin-bottom: 10px;
+}
+
 .callback__field {
 	border: 2px solid var(--main-color) !important;
+	margin-bottom: 10px;
 }
 
 button.callback__button {
