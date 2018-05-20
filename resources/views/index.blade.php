@@ -16,115 +16,18 @@ $header__center = "Сервис по подбору отелей<br>«HotelSearc
 
 @section('content')
     <section class="hotels__items">
-        <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel1.jpg') }}')">
-            <div class="hotels__info">
-                <div class="hotels__name">Отель №1</div>
-                <div class="hotels__stars">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
+        @foreach($hotels as $hotel)
+            <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/'.$hotel->img) }}');animation-delay: {{ $loop->index / 2 }}s">
+                <div class="hotels__info">
+                    <div class="hotels__name">{{ $hotel->name }}</div>
+                    <div class="hotels__stars">
+                        @for($i = 1; $i < $hotel->star_count; $i++)
+                            <img src="{{ asset('img/star.png') }}" alt="">
+                        @endfor
+                    </div>
                 </div>
+                <a href="{{ route('hotel.view', ['id' => $hotel->id]) }}" class="hotels__read">Посмотреть</a>
             </div>
-            <a href="{{ route('hotel.view', ['id' => 1]) }}" class="hotels__read">Посмотреть</a>
-        </div>
-        <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel2.jpg') }}')">
-            <div class="hotels__info">
-                <div class="hotels__name">Отель №1</div>
-                <div class="hotels__stars">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                </div>
-            </div>
-            <a href="" class="hotels__read">Посмотреть</a>
-        </div>
-        <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel1.jpg') }}')">
-            <div class="hotels__info">
-                <div class="hotels__name">Отель №1</div>
-                <div class="hotels__stars">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                </div>
-            </div>
-            <a href="" class="hotels__read">Посмотреть</a>
-        </div>
-        <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel2.jpg') }}')">
-            <div class="hotels__info">
-                <div class="hotels__name">Отель №1</div>
-                <div class="hotels__stars">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                </div>
-            </div>
-            <a href="" class="hotels__read">Посмотреть</a>
-        </div>
-        <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel1.jpg') }}')">
-            <div class="hotels__info">
-                <div class="hotels__name">Отель №1</div>
-                <div class="hotels__stars">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                </div>
-            </div>
-            <a href="" class="hotels__read">Посмотреть</a>
-        </div>
-        <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel2.jpg') }}')">
-            <div class="hotels__info">
-                <div class="hotels__name">Отель №1</div>
-                <div class="hotels__stars">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                </div>
-            </div>
-            <a href="" class="hotels__read">Посмотреть</a>
-        </div>
-        <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel1.jpg') }}')">
-            <div class="hotels__info">
-                <div class="hotels__name">Отель №1</div>
-                <div class="hotels__stars">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                </div>
-            </div>
-            <a href="" class="hotels__read">Посмотреть</a>
-        </div>
-        <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel2.jpg') }}')">
-            <div class="hotels__info">
-                <div class="hotels__name">Отель №1</div>
-                <div class="hotels__stars">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                </div>
-            </div>
-            <a href="" class="hotels__read">Посмотреть</a>
-        </div>
-        <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel1.jpg') }}')">
-            <div class="hotels__info">
-                <div class="hotels__name">Отель №1</div>
-                <div class="hotels__stars">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                </div>
-            </div>
-            <a href="" class="hotels__read">Посмотреть</a>
-        </div>
-        <div class="hotels__item" style="background-image: url('{{ asset('img/hotels/hotel2.jpg') }}')">
-            <div class="hotels__info">
-                <div class="hotels__name">Отель №1</div>
-                <div class="hotels__stars">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                    <img src="{{ asset('img/star.png') }}" alt="">
-                </div>
-            </div>
-            <a href="" class="hotels__read">Посмотреть</a>
-        </div>
+        @endforeach
     </section>
 @endsection

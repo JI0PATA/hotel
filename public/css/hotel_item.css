@@ -17,6 +17,17 @@
 	justify-content: center;
 	transition: .4s;
 	cursor: pointer;
+	animation: showItem .5s forwards;
+	transform: scale(0);
+}
+
+@keyframes showItem {
+	0% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 .hotels__item:before {

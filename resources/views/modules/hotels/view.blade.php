@@ -1,4 +1,4 @@
-{{ config(['app.name' => 'Название отеля']) }}
+{{ config(['app.name' => $hotel->name]) }}
 
 @extends('layouts.app')
 
@@ -12,7 +12,7 @@
 
     <style>
         #header {
-            background-image: url("{{ asset('img/bg.jpg') }}");
+            background-image: url("{{ asset('img/hotels/'.$hotel->img) }}");
         }
     </style>
 @endpush
@@ -56,19 +56,24 @@
 @endpush
 
 <?php
+$stars = '';
+
+for ($i = 1; $i < $hotel->star_count; $i++)
+    $stars .= '<img src="' . asset('img/star.png') . '" alt="">';
+
+$min_price = $hotel->price->min('price');
+
 $header__center = '
-<div class="header__title">Отель №1</div>
+<div class="header__title">' . $hotel->name . '</div>
 <div class="header__stars">
-<img src="' . asset('img/star.png') . '" alt="">
-<img src="' . asset('img/star.png') . '" alt="">
-<img src="' . asset('img/star.png') . '" alt="">
+' . $stars . '
 </div>
 <div class="header__hotel_info">
 <div class="header__hotel_info-address">
-г. Казань, ул. Вахитова 12/1
+' . $hotel->city . ', ' . $hotel->address . '
 </div>
 <div class="header__hotel_info-price">
-Цена от: 123 руб.
+Цена от: ' . $min_price . ' руб.
 </div>
 </div>
 ';
@@ -77,174 +82,53 @@ $header__center = '
 
 @section('content')
     <section class="hotel__description wp">
-        <h2 class="text-center">Забронировать Отель №1</h2>
+        <h2 class="text-center">Забронировать {{ $hotel->name }}</h2>
         <div class="hotel__description-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, aspernatur beatae eius explicabo
-            laboriosam magni maiores minus molestiae natus officia perferendis quae qui recusandae sed tenetur vel
-            veniam. Beatae commodi expedita nisi quam quisquam repellendus sit suscipit. Consequuntur dolorem eaque eum
-            minus perspiciatis quisquam reprehenderit sunt vel! Accusamus consectetur, dolorum impedit in laudantium
-            officiis placeat quis ratione sit tenetur ut voluptatibus? Architecto consequuntur dolor dolorem ea fugit
-            hic neque nisi obcaecati perferendis. A accusamus adipisci alias aut consequuntur cumque, dolorum ex fugit
-            id laboriosam provident quae! Magni nihil, vel? Accusamus ad aut beatae culpa dolore eos error et explicabo
-            itaque iure labore, magni, numquam odio optio possimus quam quibusdam quo repellendus sit tenetur. A
-            accusamus ad aliquam architecto cumque cupiditate distinctio eveniet exercitationem facere facilis, impedit
-            iusto labore laborum modi nam nihil nobis quae quas ratione sint soluta tenetur totam, unde velit, veniam?
-            Ad incidunt ipsa iusto maxime nobis pariatur provident quibusdam repellat temporibus voluptas! Adipisci cum
-            labore necessitatibus quod quos? Alias architecto corporis ea eveniet incidunt molestias rem rerum,
-            temporibus ullam vitae! Ab asperiores atque dolor ea eligendi et, facere impedit iure libero, magnam maxime
-            minima minus molestias nesciunt nostrum possimus praesentium provident quisquam quod sint suscipit tempora
-            velit.
+            {{ $hotel->description }}
         </div>
     </section>
 
     <section class="photo_gallery">
         <div class="slider-for container">
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
+            @foreach($hotel->photos as $photo)
+                <div class="slider__item">
+                    <img src="{{ asset('img/hotels/gallery/'.$photo->img) }}" alt="">
+                </div>
+            @endforeach
         </div>
         <div class="slider-nav container">
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel1.jpg') }}" alt="">
-            </div>
-            <div class="slider__item">
-                <img src="{{ asset('img/hotels/hotel2.jpg') }}" alt="">
-            </div>
+            @foreach($hotel->photos as $photo)
+                <div class="slider__item">
+                    <img src="{{ asset('img/hotels/gallery/'.$photo->img) }}" alt="">
+                </div>
+            @endforeach
         </div>
     </section>
 
     <section class="rooms__price wp">
         <h2 class="text-center">Типы номеров</h2>
         <div class="price__items">
-            <div class="item_parent">
-                <div class="button button__price">
-                    <div class="price__title">Одноместный</div>
-                    <div class="price__price">3000 руб.</div>
+            @foreach($hotel->price as $price)
+                <div class="item_parent">
+                    <div class="button button__price">
+                        <div class="price__title">{{ $price->room->name }}</div>
+                        <div class="price__price">{{ $price->price }} руб.</div>
+                    </div>
                 </div>
-            </div>
-            <div class="item_parent">
-                <div class="button button__price">
-                    <div class="price__title">Двухместный</div>
-                    <div class="price__price">3000 руб.</div>
-                </div>
-            </div>
-            <div class="item_parent">
-                <div class="button button__price">
-                    <div class="price__title">Трёхместный</div>
-                    <div class="price__price">3000 руб.</div>
-                </div>
-            </div>
-            <div class="item_parent">
-                <div class="button button__price">
-                    <div class="price__title">Четырёхместный</div>
-                    <div class="price__price">3000 руб.</div>
-                </div>
-            </div>
-            <div class="item_parent">
-                <div class="button button__price">
-                    <div class="price__title">Люкс</div>
-                    <div class="price__price">3000 руб.</div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
 
     <section class="hotel__services wp">
         <h2 class="text-center">Услуги отеля</h2>
         <div class="hotel__services_items">
+            @foreach($hotel->services as $service)
             <div class="item_parent">
                 <div class="button hotel__service_item">
-                    Wi-FI
+                    {{ $service->name }}
                 </div>
             </div>
-            <div class="item_parent">
-                <div class="button hotel__service_item">
-                    Бассейн
-                </div>
-            </div>
-            <div class="item_parent">
-                <div class="button hotel__service_item">
-                    Ресторан
-                </div>
-            </div>
-            <div class="item_parent">
-                <div class="button hotel__service_item">
-                    Бизнес-центр
-                </div>
-            </div>
-            <div class="item_parent">
-                <div class="button hotel__service_item">
-                    Прачечная
-                </div>
-            </div>
-            <div class="item_parent">
-                <div class="button hotel__service_item">
-                    Бар
-                </div>
-            </div>
+                @endforeach
         </div>
     </section>
 @endsection

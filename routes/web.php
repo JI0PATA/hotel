@@ -56,5 +56,3 @@ Route::middleware('AdminPanel')->prefix('admin')->name('admin.')->group(function
 });
 
 Route::get('hotel/{id}', 'HotelController@view')->name('hotel.view');
-
-Route::get('test', 'HotelController@test');

@@ -12,7 +12,11 @@ class HotelController extends Controller
 {
     public function view($id)
     {
-        return view('modules.hotels.view');
+        $hotel = Hotel::with(['rooms', 'services', 'price', 'photos'])->find($id);
+
+        return view('modules.hotels.view', [
+            'hotel' => $hotel
+        ]);
     }
 
     public function index(Request $request)

@@ -76,6 +76,7 @@ section {
 
 /************* БЛОКИ С ЦЕНАМИ *************/
 .button__price .price__price {
+	width: 100%;
 	position: absolute;
 	top: 50%;
 	left: 50%;

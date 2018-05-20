@@ -26,7 +26,7 @@
         <form action="">
             <div class="row">
                 <div class="col-md-4">
-                    <input type="text" class="form-control" placeholder="Укажите город или отель" required id="autocomplete" name="search" value="{{ Request::get('search') }}">
+                    <input type="text" class="form-control" placeholder="Укажите город или отель" id="autocomplete" name="search" value="{{ Request::get('search') }}">
                 </div>
                 <div class="col-md-2">
                     <button type="submit" class="btn btn-primary">Поиск</button>
