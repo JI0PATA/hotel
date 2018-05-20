@@ -46,7 +46,7 @@ class HomeController extends Controller
         $room = $request->room;
         $comment = $request->comment;
 
-        $res = mail('wanja_shukov@mail.ru', 'Бронирование номера', "Отель: {$hotel}\nИмя: {$name}\nТелефон: {$call}\nТип номера: {$room}\nКомментарий: {$comment}");
+        $res = mail('marelekseewann@mail.ru', 'Бронирование номера', "Отель: {$hotel}\nИмя: {$name}\nТелефон: {$call}\nТип номера: {$room}\nКомментарий: {$comment}");
 
         if ($res) createMsg(1, 'Ваше сообщение отправлено!');
         else createMsg(0, 'Сообщение не отправлено! Попробуйте позже!');
