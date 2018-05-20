@@ -26,7 +26,7 @@ $header__center = "Сервис по подбору отелей<br>«HotelSearc
                         @endfor
                     </div>
                 </div>
-                <a href="{{ route('hotel.view', ['id' => $hotel->id]) }}" class="hogitels__read">Посмотреть</a>
+                <a href="{{ route('hotel.view', ['id' => $hotel->id]) }}" class="hotels__read">Посмотреть</a>
             </div>
         @endforeach
     </section>
