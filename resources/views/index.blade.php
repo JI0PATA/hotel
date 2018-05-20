@@ -21,7 +21,7 @@ $header__center = "Сервис по подбору отелей<br>«HotelSearc
                 <div class="hotels__info">
                     <div class="hotels__name">{{ $hotel->name }}</div>
                     <div class="hotels__stars">
-                        @for($i = 1; $i < $hotel->star_count; $i++)
+                        @for($i = 0; $i < $hotel->star_count; $i++)
                             <img src="{{ asset('img/star.png') }}" alt="">
                         @endfor
                     </div>

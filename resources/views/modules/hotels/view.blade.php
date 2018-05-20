@@ -58,7 +58,7 @@
 <?php
 $stars = '';
 
-for ($i = 1; $i < $hotel->star_count; $i++)
+for ($i = 0; $i < $hotel->star_count; $i++)
     $stars .= '<img src="' . asset('img/star.png') . '" alt="">';
 
 $min_price = $hotel->price->min('price');
