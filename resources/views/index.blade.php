@@ -11,7 +11,7 @@
 @endpush
 
 <?php
-$header__center = "Сервис по подбору отелей<br>«Гольфстрим»";
+$header__center = "Сервис по подбору отелей<br>ООО «Гольфстрим»";
 ?>
 
 @section('content')
