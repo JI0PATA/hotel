@@ -155,9 +155,14 @@ $header__center = '
                 <div class="col-md-12 callback__parent">
                     <textarea name="comment" rows="3" class="form__field callback__field" placeholder="Комментарий"></textarea>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <input type="date" placeholder="Дата прибытия" class="form__field callback__field" name="arrival_date">
+                </div>
             </div><br>
             <div class="row">
-                <button class="callback__button form__field callback__field col-md-3">Забронировать</button>
+                <button class="callback__button form__field callback__field col-md-4">Забронировать</button>
             </div>
         </form>
     </section>
