@@ -157,10 +157,15 @@ $header__center = '
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 offset-md-4">
-                    <input type="date" placeholder="Дата прибытия" class="form__field callback__field" name="arrival_date">
+                <div class="col-md-4 offset-md-4 form-group">
+                    <div style="font-size: 20px;" class="text-center">
+                        Дата заезда
+                    </div>
+                    <div>
+                        <input type="date" placeholder="Дата заезда" class="form__field callback__field" name="arrival_date">
+                    </div>
                 </div>
-            </div><br>
+            </div>
             <div class="row">
                 <button class="callback__button form__field callback__field col-md-4">Забронировать</button>
             </div>
